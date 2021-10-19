@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <div className={styles.header}>
-      {routes.map(x => 
+      {routes.map(x =>
         <Link key={x.name} className={styles.link} to={x.link}>{x.name}</Link>
       )}
     </div>

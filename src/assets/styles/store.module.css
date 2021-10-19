@@ -2,4 +2,8 @@
   background-color: antiquewhite;
   width: 100%;
   min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

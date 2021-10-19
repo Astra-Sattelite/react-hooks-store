@@ -1,37 +1,18 @@
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
 import styles from "../styles/store.module.css"
 import axios from "axios"
 import { useState, useEffect } from "react";
+import { Product } from "../../StoreApp"
 
-interface Product {
-  id: number,
-  title: string,
-  price: string,
-  category: string,
-  description: string,
-  image: string
+interface StoreProps {
+  products: Product[],
+  setProducts: (product: Product[]) => void
 }
 
-const Store = () => {
-
-  const [products, setProducts] = useState<Product[]>([] as Product[])
-
-  useEffect(() => {
-    const getProducts = async () => {
-      const request = await axios.get("https://fakestoreapi.com/products")
-        setProducts(request.data as Product[])
-    }
-    getProducts()
-  }, [])
+const Store = (props: StoreProps) => {
 
   return (
     <div className={styles.store}>
-      {products.map(product =>
+      {props.products.map(product =>
         <div key={product.id}>{product.title}</div>
       )}
     </div>

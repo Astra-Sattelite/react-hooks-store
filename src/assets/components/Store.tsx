@@ -1,9 +1,9 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 import styles from "../styles/store.module.css"
 import axios from "axios"
 import { useState, useEffect } from "react";
@@ -25,7 +25,6 @@ const Store = () => {
     const getProducts = async () => {
       const request = await axios.get("https://fakestoreapi.com/products")
         setProducts(request.data as Product[])
-        return request
     }
     getProducts()
   }, [])

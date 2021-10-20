@@ -3,7 +3,43 @@
   width: 100%;
   min-height: calc(100vh - 100px);
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
+}
+
+.storeGrid {
+  margin-top: 5%;
+  width: 90%;
+  min-height: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.storeItem {
+  background-color: white;
+  width: 200px;
+  height: 250px;
+  border: 1px solid black;
+  justify-self: center;
+}
+
+.storeItemTitle {
+  height: 65px;
+  overflow: scroll;
+  text-align: center;
+  width: 100%;
+}
+
+.storeItemPrice {
+  height: 20px;
+  overflow: hidden;
+  width: 100%;
+  text-align: right;
+
+}
+
+.storeItemButton {
+  height: 40px;
+  overflow: hidden;
+  width: 100%;
 }

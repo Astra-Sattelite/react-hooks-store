@@ -5,4 +5,9 @@ export default identifiersMap
 
 export type CssIdentifiersMap = {
   "store": string|undefined
+  "storeGrid": string|undefined
+  "storeItem": string|undefined
+  "storeItemButton": string|undefined
+  "storeItemPrice": string|undefined
+  "storeItemTitle": string|undefined
 }
